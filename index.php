@@ -1,10 +1,6 @@
 <?php
 
-if ($_GET){
-    include($_GET['side'].".php");
-}else{
-    include "forside.php";
-}
+#Der kommer mere PHP kode snart!!
 
 ?>
 
@@ -20,16 +16,22 @@ if ($_GET){
     <title>Document</title>
 </head>
 <body>
+    <div id="wrapper">
 
-<header>
-    <nav>
-        <ul>
-            <li><a href="index.php" title="Til Forsiden">Forside</a></li>
-            <li><a href="index.php?side=galleri" title="Til Galleriet">Gallriet</a></li>
-            <li><a href="index.php?side=nyheder" title="Til Nyheder">Nyheder</a></li>
-        </ul>
-    </nav>
-</header>
+        <header>
+           <?php include "menu.php"; ?>
+        </header>
 
+        <main>
+            <?php
+            if ($_GET){
+                include($_GET['side'].".php");
+            }else{
+                include "forside.php";
+            }
+
+            ?>
+        </main>
+    </div>
 </body>
 </html>
