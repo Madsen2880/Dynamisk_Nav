@@ -17,6 +17,8 @@
             <label>Hatte</label><input type="checkbox" name="produkter[]" value="Hatte">
             <label>Sko</label><input type="checkbox" name="produkter[]" value="Sko">
             <label>Tasker</label><input type="checkbox" name="produkter[]" value="Tasker">
+            <label>Bælter</label><input type="checkbox" name="produkter[]" value="Bælter">
+            <label>Skjorter</label><input type="checkbox" name="produkter[]" value="Skjorter">
             <input type="submit" value="Send">
 
         </form>
