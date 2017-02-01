@@ -31,9 +31,9 @@ if($_POST) {
             $fejl++;
         } else {
             if (is_numeric($_POST['emne'])) {
-                $fejlemne = "navn - Feltet skal udfyldes med bogstaver!";
+                $fejlemne = "Emne - Feltet skal udfyldes med bogstaver!";
             } else {
-                $email = $_POST['emne'];
+                $emne = $_POST['emne'];
             }
         }
     }
@@ -56,11 +56,11 @@ if($_POST) {
 
     if (isset($_POST['besked'])) {
         if (empty($_POST['besked'])) {
-            $fejlbesked = "Emne - Feltet er ikke udfyldt!";
+            $fejlbesked = "Besked - Feltet er ikke udfyldt!";
             $fejl++;
         } else {
-            if (is_numeric($_POST['besked'])) {
-                $fejlbesked = "Besked - Feltet skal udfyldes med bogstaver!";
+            if (strlen($_POST['besked']) <= 50) {
+                $fejlbesked = "Besked - længde på besked skal være mere end 50 tegn!";
             } else {
                 $email = $_POST['besked'];
             }
